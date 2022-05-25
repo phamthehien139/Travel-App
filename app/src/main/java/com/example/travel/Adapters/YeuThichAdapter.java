@@ -12,7 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.travel.Details;
-import com.example.travel.Models.FavItem;
+import com.example.travel.Models.YeuThichItem;
 import com.example.travel.R;
 import com.example.travel.Helpers.TravelDB;
 
@@ -25,11 +25,11 @@ public class YeuThichAdapter extends RecyclerView.Adapter<YeuThichAdapter.ViewHo
 
     // Danh sách để lưu trữ tất cả các chi tiết
     private Context context;
-    private List<FavItem> favItemList;
+    private List<YeuThichItem> favItemList;
     private TravelDB travelDB;
 
     // Counstructor
-    public YeuThichAdapter(Context context, List<FavItem> favItemList) {
+    public YeuThichAdapter(Context context, List<YeuThichItem> favItemList) {
         this.context = context;
         this.favItemList = favItemList;
     }
@@ -110,7 +110,7 @@ public class YeuThichAdapter extends RecyclerView.Adapter<YeuThichAdapter.ViewHo
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();
-                    final FavItem favItem = favItemList.get(position);
+                    final YeuThichItem favItem = favItemList.get(position);
                     travelDB.remove_fav(favItem.getKey_id());
                     removeItem(position);
                 }

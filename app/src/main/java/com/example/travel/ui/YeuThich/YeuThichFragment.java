@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.travel.Adapters.YeuThichAdapter;
 import com.example.travel.Helpers.TravelDB;
-import com.example.travel.Models.FavItem;
+import com.example.travel.Models.YeuThichItem;
 import com.example.travel.R;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class YeuThichFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private TravelDB travelDB;
-    private List<FavItem> favItemList = new ArrayList<>();
+    private List<YeuThichItem> favItemList = new ArrayList<>();
     private YeuThichAdapter favAdapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -61,7 +61,7 @@ public class YeuThichFragment extends Fragment {
                 @SuppressLint("Range") String capital = cursor.getString(cursor.getColumnIndex(TravelDB.CAPITAL));
                 @SuppressLint("Range") String other =cursor.getString(cursor.getColumnIndex(TravelDB.OTHER));
 
-                FavItem favItem = new FavItem(title, id, image, countrydesc, currency, language, capital, other);
+                YeuThichItem favItem = new YeuThichItem(title, id, image, countrydesc, currency, language, capital, other);
                 favItemList.add(favItem);
             }
         }finally {

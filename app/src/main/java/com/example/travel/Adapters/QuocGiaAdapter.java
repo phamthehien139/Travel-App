@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.travel.Models.CountryItem;
+import com.example.travel.Models.QuocGiaItem;
 import com.example.travel.Details;
 import com.example.travel.ImageNicer;
 import com.example.travel.R;
@@ -27,11 +27,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class QuocGiaAdapter extends RecyclerView.Adapter<QuocGiaAdapter.ViewHolder> {
 
-    private ArrayList<CountryItem> countryItems;
+    private ArrayList<QuocGiaItem> countryItems;
     private Context context;
     private TravelDB travelDB;
 
-    public QuocGiaAdapter(ArrayList<CountryItem> countryItems, Context context){
+    public QuocGiaAdapter(ArrayList<QuocGiaItem> countryItems, Context context){
         this.countryItems = countryItems;
         this.context = context;
     }
@@ -54,7 +54,7 @@ public class QuocGiaAdapter extends RecyclerView.Adapter<QuocGiaAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull QuocGiaAdapter.ViewHolder holder, int position) {
-        final CountryItem countryItem= countryItems.get(position);
+        final QuocGiaItem countryItem= countryItems.get(position);
 
         readCursorData(countryItem,holder);
         holder.imageView.setImageBitmap(ImageNicer.decodeSampledBitmapFromResource(context.getResources(),countryItems.get(position).getImageResourse(),300,300));
@@ -115,7 +115,7 @@ public class QuocGiaAdapter extends RecyclerView.Adapter<QuocGiaAdapter.ViewHold
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();
-                    CountryItem countryItem = countryItems.get(position);
+                    QuocGiaItem countryItem = countryItems.get(position);
 
                     if (countryItem.getFavStatus().equals("0")) {
                         countryItem.setFavStatus("1");
@@ -141,7 +141,7 @@ public class QuocGiaAdapter extends RecyclerView.Adapter<QuocGiaAdapter.ViewHold
         editor.putBoolean("firstStart",false);
         editor.apply();
     }
-    private void readCursorData(CountryItem countryItem, ViewHolder viewHolder) {
+    private void readCursorData(QuocGiaItem countryItem, ViewHolder viewHolder) {
         Cursor cursor = travelDB.read_all_data(countryItem.getKey_id());
         SQLiteDatabase db = travelDB.getReadableDatabase();
         try{

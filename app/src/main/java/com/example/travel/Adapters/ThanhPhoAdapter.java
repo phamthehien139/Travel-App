@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.example.travel.ThanhPhoDetails;
-import com.example.travel.Models.CityItem;
+import com.example.travel.Models.ThanhPhoItem;
 import com.example.travel.ImageNicer;
 import com.example.travel.R;
 import com.example.travel.Helpers.TravelDB;
@@ -22,12 +22,12 @@ import androidx.recyclerview.widget.RecyclerView;
 public class ThanhPhoAdapter extends RecyclerView.Adapter<ThanhPhoAdapter.ViewHolder>  {
 
     // Danh sách để lưu trữ tất cả các chi tiết
-        private ArrayList<CityItem> cityItems;
+        private ArrayList<ThanhPhoItem> thanhPhoItems;
         private Context context;
         private TravelDB travelDB;
 
-        public ThanhPhoAdapter(ArrayList<CityItem> cityItems, Context context){
-            this.cityItems = cityItems;
+        public ThanhPhoAdapter(ArrayList<ThanhPhoItem> thanhPhoItems, Context context){
+            this.thanhPhoItems = thanhPhoItems;
             this.context = context;
         }
 
@@ -52,17 +52,17 @@ public class ThanhPhoAdapter extends RecyclerView.Adapter<ThanhPhoAdapter.ViewHo
     // Phương thức này được gọi khi liên kết dữ liệu với các khung nhìn đang được tạo trong RecyclerView
         @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            final CityItem cityItem= cityItems.get(position);
+            final ThanhPhoItem thanhPhoItem = thanhPhoItems.get(position);
 
-            readCursorData(cityItem,holder);
+            readCursorData(thanhPhoItem,holder);
             // Đặt dữ liệu thành các chế độ xem ở đây
             // Sự cố pixel hình ảnh đã được giải quyết
-            holder.imageView1.setImageBitmap(ImageNicer.decodeSampledBitmapFromResource(context.getResources(),cityItems.get(position).getImageResourse1(),100,100));
-            holder.title1TextView.setText(cityItem.getTitle1());
-            holder.countryNameTextView.setText(cityItem.getCountryname());
-            holder.populationTextView.setText(cityItem.getPopulation());
-            holder.citydescTextView.setText(cityItem.getCitydesc());
-            holder.airportTextView.setText(cityItem.getAirport());
+            holder.imageView1.setImageBitmap(ImageNicer.decodeSampledBitmapFromResource(context.getResources(), thanhPhoItems.get(position).getImageResourse1(),100,100));
+            holder.title1TextView.setText(thanhPhoItem.getTitle1());
+            holder.countryNameTextView.setText(thanhPhoItem.getCountryname());
+            holder.populationTextView.setText(thanhPhoItem.getPopulation());
+            holder.citydescTextView.setText(thanhPhoItem.getCitydesc());
+            holder.airportTextView.setText(thanhPhoItem.getAirport());
 
 
             // đặt trình nghe nhấp chuột thành các mục trực quan trong trình xem
@@ -70,12 +70,12 @@ public class ThanhPhoAdapter extends RecyclerView.Adapter<ThanhPhoAdapter.ViewHo
                 @Override
                 public void onClick(View view) {   //set on click for cities list
                     Intent intent = new Intent(context, ThanhPhoDetails.class);
-                    intent.putExtra("image1",cityItem.getImageResourse1());
-                    intent.putExtra("title1TextView",cityItem.getTitle1());
-                    intent.putExtra("countryNameTextView",cityItem.getCountryname());
-                    intent.putExtra("populationTextView",cityItem.getPopulation());
-                    intent.putExtra("citydescTextView",cityItem.getCitydesc());
-                    intent.putExtra("airportTextView",cityItem.getAirport());
+                    intent.putExtra("image1", thanhPhoItem.getImageResourse1());
+                    intent.putExtra("title1TextView", thanhPhoItem.getTitle1());
+                    intent.putExtra("countryNameTextView", thanhPhoItem.getCountryname());
+                    intent.putExtra("populationTextView", thanhPhoItem.getPopulation());
+                    intent.putExtra("citydescTextView", thanhPhoItem.getCitydesc());
+                    intent.putExtra("airportTextView", thanhPhoItem.getAirport());
                     context.startActivity(intent);
                 }
             });
@@ -85,7 +85,7 @@ public class ThanhPhoAdapter extends RecyclerView.Adapter<ThanhPhoAdapter.ViewHo
 
         @Override
         public int getItemCount() {
-            return cityItems.size();
+            return thanhPhoItems.size();
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder {
@@ -120,8 +120,8 @@ public class ThanhPhoAdapter extends RecyclerView.Adapter<ThanhPhoAdapter.ViewHo
             editor.putBoolean("firstStart",false);
             editor.apply();
         }
-        private void readCursorData(CityItem cityItem, ThanhPhoAdapter.ViewHolder viewHolder) {
-            Cursor cursor = travelDB.read_all_city_data(cityItem.getKey_id1());
+        private void readCursorData(ThanhPhoItem thanhPhoItem, ThanhPhoAdapter.ViewHolder viewHolder) {
+            Cursor cursor = travelDB.read_all_city_data(thanhPhoItem.getKey_id1());
             SQLiteDatabase db = travelDB.getReadableDatabase();
 
             }

@@ -1,6 +1,6 @@
 package com.example.travel.Models;
 
-public class CountryItem {
+public class QuocGiaItem {
 
     private int imageResourse;
     private String title;
@@ -13,10 +13,10 @@ public class CountryItem {
     private String other;
 
     //constructor
-    public CountryItem() {
+    public QuocGiaItem() {
     }
 
-    public CountryItem(int imageResourse, String title, String key_id, String favStatus, String countrydesc, String currency, String language, String capital, String other) {
+    public QuocGiaItem(int imageResourse, String title, String key_id, String favStatus, String countrydesc, String currency, String language, String capital, String other) {
         this.imageResourse = imageResourse;
         this.title = title;
         this.key_id = key_id;

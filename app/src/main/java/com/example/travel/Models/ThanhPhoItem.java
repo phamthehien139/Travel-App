@@ -2,7 +2,7 @@ package com.example.travel.Models;
 
 
 
-public class CityItem {
+public class ThanhPhoItem {
 
         private int imageResourse1;
         private String title1;
@@ -13,12 +13,12 @@ public class CityItem {
         private String airport;
 
         //constructor
-        public CityItem() {
+        public ThanhPhoItem() {
         }
 
 
 
-    public CityItem(int imageResourse1, String title1, String countryname, String key_id1, String population, String citydesc, String airport) {
+    public ThanhPhoItem(int imageResourse1, String title1, String countryname, String key_id1, String population, String citydesc, String airport) {
             this.imageResourse1 = imageResourse1;
             this.title1 = title1;
             this.countryname = countryname;

@@ -1,6 +1,6 @@
 package com.example.travel.Models;
 
-public class FavItem {
+public class YeuThichItem {
 
 
     private String item_title;
@@ -13,10 +13,10 @@ public class FavItem {
     private String other;
 
 
-    public FavItem(){
+    public YeuThichItem(){
     }
 
-    public FavItem(String item_title, String key_id, int item_image, String country_desc, String currency, String language, String capital, String other) {
+    public YeuThichItem(String item_title, String key_id, int item_image, String country_desc, String currency, String language, String capital, String other) {
         this.item_title = item_title;
         this.key_id = key_id;
         this.item_image = item_image;
