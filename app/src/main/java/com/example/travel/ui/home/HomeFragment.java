@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.travel.R;
-import com.example.travel.ui.QuocGia.CountryFragment;
+import com.example.travel.ui.QuocGia.QuocGiaFragment;
 import com.example.travel.ui.YeuThich.YeuThichFragment;
 import com.example.travel.ui.ThanhPho.ThanhPhoFragment;
 
@@ -37,7 +37,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
 
                 FragmentTransaction fr = getFragmentManager().beginTransaction();
-                fr.replace(R.id.nav_host_fragment,new CountryFragment());
+                fr.replace(R.id.nav_host_fragment,new QuocGiaFragment());
                 fr.commit();
 
             }

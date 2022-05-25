@@ -7,7 +7,7 @@ import android.graphics.BitmapFactory;
 public class ImageNicer {
     public static int calculateInSampleSize(
             BitmapFactory.Options options, int reqWidth, int reqHeight) {
-        // Raw height and width of image
+        // Chiều cao và chiều rộng  của hình ảnh
         final int height = options.outHeight;
         final int width = options.outWidth;
         int inSampleSize = 1;
@@ -16,9 +16,8 @@ public class ImageNicer {
 
             final int halfHeight = height / 2;
             final int halfWidth = width / 2;
-
-            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-            // height and width larger than the requested height and width.
+            //Tính giá trị inSampleSize lớn nhất là lũy thừa của 2 và giữ nguyên cả hai
+            //chiều cao và chiều rộng lớn hơn chiều cao và chiều rộng được yêu cầu
             while ((halfHeight / inSampleSize) >= reqHeight
                     && (halfWidth / inSampleSize) >= reqWidth) {
                 inSampleSize *= 2;

@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class CountryViewModel extends ViewModel {
+public class QuocGiaViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public CountryViewModel() {
+    public QuocGiaViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is country fragment");
     }

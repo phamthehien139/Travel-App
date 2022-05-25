@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_country"
-        android:name="com.example.travel.ui.QuocGia.CountryFragment"
+        android:name="com.example.travel.ui.QuocGia.QuocGiaFragment"
         android:label="@string/title_country"
         tools:layout="@layout/fragment_quocgia" />
 

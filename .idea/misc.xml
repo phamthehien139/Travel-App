@@ -6,7 +6,14 @@
         <entry key="..\:/android/Travel-App-master/app/src/main/res/layout/activity_login.xml" value="0.19293478260869565" />
         <entry key="..\:/android/Travel-App-master/app/src/main/res/layout/activity_register.xml" value="0.19293478260869565" />
         <entry key="..\:/android/Travel-App/app/src/main/res/layout/activity_login.xml" value="0.19293478260869565" />
+        <entry key="..\:/android/Travel-App/app/src/main/res/layout/activity_note_add.xml" value="0.1" />
         <entry key="..\:/android/Travel-App/app/src/main/res/layout/activity_register.xml" value="0.19293478260869565" />
+        <entry key="..\:/android/Travel-App/app/src/main/res/layout/content_note_detail.xml" value="0.1" />
+        <entry key="..\:/android/Travel-App/app/src/main/res/layout/custom_note_list_view.xml" value="0.1" />
+        <entry key="..\:/android/Travel-App/app/src/main/res/layout/fav_item.xml" value="0.19293478260869565" />
+        <entry key="..\:/android/Travel-App/app/src/main/res/layout/fragment_home.xml" value="0.19293478260869565" />
+        <entry key="..\:/android/Travel-App/app/src/main/res/layout/fragment_quocgia.xml" value="0.19293478260869565" />
+        <entry key="..\:/android/Travel-App/app/src/main/res/layout/fragment_yeuthich.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -17,7 +17,7 @@ import com.example.travel.R;
 
 import java.util.ArrayList;
 
-public class CountryFragment extends Fragment {
+public class QuocGiaFragment extends Fragment {
 
     private ArrayList<CountryItem> countryItems = new ArrayList<>();
 

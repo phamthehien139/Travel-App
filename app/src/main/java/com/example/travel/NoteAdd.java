@@ -32,7 +32,7 @@ public class NoteAdd extends AppCompatActivity {
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Enter New Note");
+        getSupportActionBar().setTitle("Nhập tiêu đề Notes");
 
         noteDetails = findViewById(R.id.note_Details);
         noteTitle = findViewById(R.id.note_Title);
