@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Travel</string>
+    <string name="title_home">Home</string>
+    <string name="title_favourites">Sở thích của tôi</string>
+    <string name="title_cities">Thành Phố</string>
+    <string name="title_country">Quốc gia </string>
+    <string name="title_activity_maps">Map</string>
+    <string name="city_weather">15 C</string>
+    <string name="weather_desc">Nhiều nắng</string>
+    <string name="city_title">Tên Thành Phố</string>
+    <string name="City_description">Chi tiết thành phố</string>
+    <string name="Airport">sân bay gần nhất</string>
+    <string name="City_map">Bản đồ thành phố</string>
+    <string name="Wiki">Wikipedia thành phố</string>
+    <string name="city_population">Dân số của thành phố</string>
+    <string name="Countries">Quốc gia</string>
+    <string name="Favourites">Yêu thích</string>
+    <string name="Cities">Thành phố</string>
+    <string name="Country_name">Tên quốc gia</string>
+    <string name="Home_page_title">Home</string>
+    <string name="title_activity_Note">Ghi chú của tôi</string>
+    <string name="title_activity_detail">Ghi chú chi tiết</string>
+    <string name="Note_Title">Tiêu đề ghi chú</string>
+    <string name="note_created_date">tạo : 4/5/2022</string>
+    <string name="note_created_time">07:07</string>
+    <string name="note_empty">Ghi chú trống. Nhấp vào + để thêm ghi chú mới ...</string>
+
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="not_registered">Not Registered Click Here</string>
+    <string name="register">Register</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_registered">Already Registered Click Here</string>
+    <string name="welcome_user">Chào mừng người dùng</string>
+
+    <string name="country_desc">Chi tiết</string>
+    <string name="Currency">Tiền tệ</string>
+    <string name="Languages">Ngôn ngữ</string>v
+    <string name="Capital_city">Thủ đô thành phố</string>
+    <string name="other_cities">Các thành phố khác</string>
+</resources>
